@@ -1,0 +1,128 @@
+// webfont mixin
+
+@mixin font-face($style-name, $file, $family) {
+    $filepath: $file;
+    @font-face {
+        font-family: "#{$style-name}";
+        src: url($filepath + ".eot");
+        src: url($filepath + ".eot?#iefix") format('embedded-opentype'), url($filepath + ".woff") format('woff'), url($filepath + ".ttf")  format('truetype'), url($filepath + ".svg#" + $style-name + "") format('svg');
+    }
+}
+
+// css3 animations
+
+.center {
+    transition: all 600ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+// fonts
+
+@include font-face('camcorder', 'camcorder_ms_reg-webfont', 'monospace');
+
+// clear css3 animations
+
+.off {
+    transition: none;
+}
+
+// basic configuration
+
+a,
+input,
+select,
+textarea,
+button {
+    outline: 0 none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header,
+.main,
+footer {
+    display: block;
+    width: 100%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+// share
+
+.share {
+    margin: 20px 0;
+    width: 100%;
+    display: inline-block;
+    clear: both;
+
+    .fb {
+        float: left;
+        margin: 0 10px 0 0;
+    }
+
+    .tw {
+        float: left;
+        margin: 0 10px 0 0;
+    }
+
+    .gp {
+        float: left;
+    }
+}
+
+// fitvids
+
+.fit-video {
+    width: 100%;
+}
+
+// custom colors
+
+$blue: #5ed9d6;
+$dark-blue: #21aabd;
+$red: #be2525;
+
+// custom
+
+::-moz-selection {
+    background: #000;
+    color: #fff;
+}
+
+::selection {
+    background: #000;
+    color: #fff;
+}
+
+body {
+    background: $blue;
+    color: $red;
+    font-family: camcorder;
+    p {
+        font-size: 10px;
+    }
+}
+
+// header
+
+header {
+    a {
+        color: $dark-blue;
+        text-decoration: none;
+    }
+}
+
+// imports
+
+@import "grid.scss";
+@import "print.scss";
