@@ -51,7 +51,7 @@ img {
 
 .center {
     padding: 0 12px;
-    margin: 0 ($column * 1 + $margin);
+    margin: 0 ($margin);
 }
 
 /*
@@ -82,7 +82,7 @@ img {
 
 @media screen and (max-width: 1871px) {
     .center {
-        margin: 0 ($column * 2 + $margin);
+        margin: 0 ($margin);
     }
 }
 
