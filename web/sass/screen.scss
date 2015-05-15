@@ -116,9 +116,24 @@ body {
 // header
 
 header {
-    a {
-        color: $dark-blue;
-        text-decoration: none;
+    .logo {
+        font-size: 173px;
+        margin: 7% 0 0 0;
+
+        a {
+            background: $red;
+            color: $blue;
+            text-decoration: none;
+            padding: 0 20px;
+        }
+    }
+}
+
+// main
+
+.main {
+    svg {
+        width: 10%;
     }
 }
 
