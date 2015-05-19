@@ -30,7 +30,7 @@ gulp.task('bower-styles', function() {
         .pipe(gulp.dest('web/css'));
 });
 
-gulp.task('bower-scritps', function() {
+gulp.task('bower-scripts', function() {
     return gulp.src(mainBowerFiles(['**/jquery.js', '**/*.js', '!**/modernizr.js', '!**/GGS.js']))
         .pipe(concat('vendor.min.js', {
             newLine: ';'
@@ -69,7 +69,7 @@ gulp.task('images', function() {
 });
 
 gulp.task('default', function() {
-    gulp.start('styles', 'bower-styles', 'bower-scritps', 'bower-head-scripts', 'bower-dev-scripts', 'scripts', 'images');
+    gulp.start('styles', 'bower-styles', 'bower-scripts', 'bower-head-scripts', 'bower-dev-scripts', 'scripts', 'images');
 });
 
 gulp.task('watch', function() {
