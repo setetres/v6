@@ -9,9 +9,6 @@ $(document).ready(function() {
         menu: '#menu',
         afterLoad: function(anchorLink, index){
             $('#' + anchorLink + '-wrapper').find('video')[0].play();
-            $('#callbacksDiv').append('<p>afterLoad - anchorLink:' + anchorLink + " index:" + index + '</p>');
-            console.log('===============');
-            console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index );
         }
     });
 
