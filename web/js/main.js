@@ -5,8 +5,13 @@ $(document).ready(function() {
         css3: true,
         scrollingSpeed: 600,
         easingcss3: 'cubic-bezier(0.19, 1, 0.22, 1)',
-        afterRender: function(){
-            $('video').get(0).play();
+        anchors: ['home', 'inkstarter', 'placevomit', 'ijwgh', 'cacete'],
+        menu: '#menu',
+        afterLoad: function(anchorLink, index){
+            $('#' + anchorLink + '-wrapper').find('video')[0].play();
+            $('#callbacksDiv').append('<p>afterLoad - anchorLink:' + anchorLink + " index:" + index + '</p>');
+            console.log('===============');
+            console.log("afterLoad--" + "anchorLink: " + anchorLink + " index: " + index );
         }
     });
 
@@ -22,9 +27,9 @@ $(document).ready(function() {
     $('.tile').css({height: window.innerHeight});
 
     objectFit.polyfill({
-        selector: 'video', // this can be any CSS selector
-        fittype: 'cover', // either contain, cover, fill or none
-        disableCrossDomain: 'true' // either 'true' or 'false' to not parse external CSS files.
+        selector: 'video',
+        fittype: 'cover',
+        disableCrossDomain: 'true'
     });
 
 });
