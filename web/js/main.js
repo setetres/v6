@@ -1,7 +1,11 @@
 $(document).ready(function() {
     'use strict';
 
-    $('#fullpage').fullpage();
+    $('#fullpage').fullpage({
+        css3: true,
+        scrollingSpeed: 600,
+        easingcss3: 'cubic-bezier(0.19, 1, 0.22, 1)'
+    });
 
     // resize
 
