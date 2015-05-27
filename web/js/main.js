@@ -1,6 +1,8 @@
 $(document).ready(function() {
     'use strict';
 
+    $('#fullpage').fullpage();
+
     // resize
 
     $(window).on('debouncedresize',function() {

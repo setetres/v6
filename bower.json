@@ -29,7 +29,8 @@
     "jquery-smartresize": "*",
     "golden-grid-system": "*",
     "normalize-css": "~3.0.3",
-    "object-fit": "~0.4.1"
+    "object-fit": "~0.4.1",
+    "fullpage.js": "~2.6.5"
   },
   "overrides": {
     "golden-grid-system": {
