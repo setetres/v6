@@ -1,3 +1,5 @@
+/// <reference path="../../typings/jquery/jquery.d.ts"/>
+/* global objectFit */
 $(document).ready(function() {
     'use strict';
 
@@ -7,7 +9,10 @@ $(document).ready(function() {
         easingcss3: 'cubic-bezier(0.19, 1, 0.22, 1)',
         anchors: ['home', 'inkstarter', 'placevomit', 'ijwgh', 'cacete'],
         menu: '#menu',
-        afterLoad: function(anchorLink, index){
+        onSlideLeave: function(anchorLink){
+            $('#' + anchorLink + '-wrapper').find('video')[0].stop();
+        },
+        afterLoad: function(anchorLink){
             $('#' + anchorLink + '-wrapper').find('video')[0].play();
         }
     });
