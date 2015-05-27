@@ -42,7 +42,7 @@ button {
 header,
 .main,
 footer {
-    display: block;
+    float: left;
     width: 100%;
 }
 
@@ -85,119 +85,76 @@ $red: #be2525;
 }
 
 body {
+    overflow: hidden;
     background: $light;
     color: $green;
     font-family: 'Courier New', monospace;
+    font-size: 9px;
+    line-height: 9px;
+}
 
-    p {
-        font-size: 10px;
+// commom
+
+.title {
+    font-size: 9px;
+    font-weight: normal;
+    text-transform: uppercase;
+    border-bottom: 1px solid $green;
+    margin: 0;
+}
+
+.list {
+    a {
+        color: $green;
+        text-decoration: none;
+        //border-bottom: 1px dotted $green;
+    }
+}
+
+// hamburger
+
+.hamburger {
+    float: right;
+    width: 10px;
+    height: 10px;
+    border-radius: 6px 6px 3px 3px;
+    border: 1px solid $green;
+    position: relative;
+    overflow: hidden;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $green;
+    }
+
+    &:before {
+        margin-top: -1px;
+    }
+
+    &:after {
+        margin-top: 1px;
     }
 }
 
 // header
 
 header {
-    h1 {
-        float: left;
-        font-size: 9px;
-        font-weight: normal;
-        text-transform: uppercase;
-        border-bottom: 1px solid $blue;
-        margin: 0;
-        margin-top: 10%;
-        color: $blue;
+    margin-top: 7.1%;
 
-        a {
-            background: $red;
-            color: $blue;
-            text-decoration: none;
-            padding: 0 1.5vw;
-        }
+    .title {
+        float: left;
     }
 }
 
 // main
 
 .main {
-
-    svg {
-        width: 10%;
-    }
-
-    // tiles
-
-    .tile {
-        float: left;
-        width: 100%;
-        height: 0;
-        position: relative;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        overflow: hidden;
-
-        // background video
-
-        video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 1;
-        }
-
-        // project
-
-        &.project {
-            h2,
-            p {
-                position: relative;
-                z-index: 2;
-            }
-
-            h2 {
-                display: inline-block;
-                font-size: 7.3vw;
-                padding: 0 1.3vw;
-                font-weight: normal;
-                margin: 5.5vw 0 0 0;
-            }
-
-            p {
-                display: inline-block;
-                font-size: 4.5vw;
-                padding: 0 1.3vw;
-                font-weight: normal;
-                margin: 0;
-            }
-        }
-
-        // project - red
-
-        &.red {
-            background-color: $red;
-            color: $blue;
-
-            h2 {
-                background: $blue;
-                color: $red;
-            }
-        }
-
-        // project - blue
-
-        &.blue {
-            background-color: $blue;
-            color: $red;
-
-            h2 {
-                background: $red;
-                color: $blue;
-            }
-        }
-    }
 }
 
 // imports
