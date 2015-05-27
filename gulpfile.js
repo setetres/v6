@@ -75,5 +75,5 @@ gulp.task('default', function() {
 gulp.task('watch', function() {
     gulp.watch('web/sass/**/*.scss', ['styles']);
     gulp.watch('web/js/**/*.js', ['scripts']);
-    gulp.watch('web/img/**/*', ['images']);
+    //gulp.watch('web/img/**/*', ['images']);
 });
