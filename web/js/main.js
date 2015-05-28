@@ -9,7 +9,7 @@ $(document).ready(function() {
         easingcss3: 'cubic-bezier(0.19, 1, 0.22, 1)',
         anchors: ['home', 'inkstarter', 'placevomit', 'ijwgh', 'cacete'],
         navigation: true,
-		navigationTooltips: ['About', 'InkStarter.cc', 'Placevom.it', 'IJWGH', 'Cacete Company'],
+        navigationTooltips: ['About', 'InkStarter.cc', 'Placevom.it', 'IJWGH', 'Cacete Company'],
         onSlideLeave: function(anchorLink){
             $('#' + anchorLink + '-wrapper').find('video')[0].stop();
         },
