@@ -115,7 +115,7 @@ body {
 
 .hamburger {
     float: right;
-    width: 10px;
+    width: 11px;
     height: 10px;
     border-radius: 6px 6px 3px 3px;
     border: 1px solid $gray;
@@ -151,8 +151,8 @@ body {
 
 .keyboard {
     float: right;
-    width: 10px;
-    height: 10px;
+    width: 11px;
+    height: 11px;
     position: relative;
     right: -2px;
 
@@ -261,9 +261,21 @@ footer {
 }
 
 #fp-nav {
-    top: 22%;
+    top: 37%;
     opacity: 1;
     padding: 0 12px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        height: 100%;
+        width: 1px;
+        background: $gray;
+        left: 50%;
+        top: -100%;
+        margin: -5px 0 0 -1px;
+    } 
 
     &.right {
        right: 5.55555%;
@@ -275,8 +287,8 @@ footer {
 
         li {
             display: block;
-            width: 10px;
-            height: 10px;
+            width: 11px;
+            height: 11px;
             margin: 2px 0;
             position: relative;
 
@@ -293,8 +305,8 @@ footer {
                     border-radius: 0px;
                     position: absolute;
                     z-index: 1;
-                    height: 6px;
-                    width: 6px;
+                    height: 5px;
+                    width: 5px;
                     background: transparent;
                     border: 1px solid $gray;
                     left: 50%;
@@ -304,8 +316,8 @@ footer {
 
                 &.active span {
                     height: 1px;
-                    width: 10px;
-                    margin: 0 0 0 -5px;
+                    width: 11px;
+                    margin: 0 0 0 -6px;
                     border-radius: 0px;
                     background: $gray;
                     border: 0;
@@ -327,7 +339,7 @@ footer {
             &:hover {
                 span {
                     height: 1px;
-                    width: 10px;
+                    width: 11px;
                     margin: -6px 0 0 -7px;
                     border-radius: 0px;
                 }
@@ -336,9 +348,9 @@ footer {
                     span,
                     &.active span {
                         border-radius: 0px;
-                        width: 10px;
-                        height: 10px;
-                        margin: -4px 0px 0px -5px;
+                        width: 11px;
+                        height: 11px;
+                        margin: -6px 0px 0px -6px;
                     }
                 }
 
