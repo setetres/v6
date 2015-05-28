@@ -151,10 +151,10 @@ body {
 
 .keyboard {
     float: right;
-    width: 11px;
-    height: 11px;
+    width: 13px;
+    height: 9px;
     position: relative;
-    right: -2px;
+    right: -5px;
 
     .horizontal-keys,
     .vertical-keys {
@@ -162,8 +162,8 @@ body {
         &:after {
             content: '';
             border: 1px solid $gray;
-            width: 4px;
-            height: 4px;
+            width: 3px;
+            height: 3px;
             float: left;
             position: absolute;
         }
@@ -171,15 +171,15 @@ body {
 
     .horizontal-keys {
         &:before {
-            left: -5px
+            left: -4px
         }
         &:after {
-            left: 5px;
+            left: 4px;
         }
     }
     .vertical-keys {
         &:before {
-            top: -5px
+            top: -4px
         }
         &:after {
             top: 0;
