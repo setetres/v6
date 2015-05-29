@@ -12,6 +12,7 @@
 // css3 animations
 
 .center,
+#loading,
 .hamburger,
 .hamburger:before,
 .hamburger:after {
@@ -68,10 +69,6 @@ $light: #f6fcee;
 $green: #5ed9d6;
 $gray: #2d2d2d;
 
-$blue: #5ed9d6;
-$dark-blue: #21aabd;
-$red: #be2525;
-
 // custom
 
 ::-moz-selection {
@@ -96,22 +93,13 @@ body {
 
 // commom
 
-.logo {
-    float: left;
-    font-size: 9px;
-    font-weight: normal;
-    text-transform: uppercase;
-    border-bottom: 1px solid $green;
-    margin: 0;
-}
-
 .title {
      width: 100%;
      color: $gray;
      font-family: 'Times New Roman';
      font-style: italic;
-     font-size: 100px;
-     line-height: 90px;
+     font-size: 173px;
+     line-height: 150px;
      font-weight: 100;
      text-transform: uppercase;
      text-align: center;
@@ -122,6 +110,40 @@ body {
     a {
         color: $green;
         text-decoration: none;
+    }
+}
+
+// loading
+
+#loading {
+    background: $light;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000000000;
+    opacity: 0;
+    pointer-events: none;
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .loading-activity {
+        display: block;
+        position: fixed;
+        z-index: 2000;
+        top: 50%;
+        right: 50%;
+        width: 8px;
+        height: 8px;
+        margin-top: -4px;
+        margin-right: -4px;
+        border: 1px solid $gray;
+        color: $gray;
+        animation: load-spinner 2000ms cubic-bezier(0.19, 1, 0.22, 1) infinite;
     }
 }
 
@@ -146,7 +168,6 @@ body {
         width: 100%;
         height: 1px;
         background: $gray;
-        //transition-duration: 300ms;
     }
 
     &:before {
@@ -155,9 +176,6 @@ body {
 
     &:after {
         margin-top: 1px;
-    }
-
-    &:hover {
     }
 }
 
@@ -187,6 +205,7 @@ body {
         &:before {
             left: -4px
         }
+
         &:after {
             left: 4px;
         }
@@ -195,6 +214,7 @@ body {
         &:before {
             top: -4px
         }
+
         &:after {
             top: 0;
         }
@@ -210,8 +230,13 @@ header {
     z-index: 73;
     color: $gray;
 
-    .title {
+    .logo {
         float: left;
+        font-size: 9px;
+        font-weight: normal;
+        text-transform: uppercase;
+        border-bottom: 1px solid $green;
+        margin: 0;
     }
 }
 
@@ -240,47 +265,31 @@ footer {
     left: 0;
 }
 
-// fullpage.js
+// info layer
 
-#superContainer {
+.info {
+    width: 100%;
     height: 100%;
-    position: relative;
-    /* Touch detection for Windows 8 */
-    -ms-touch-action: none;
-    /* IE 11 on Windows Phone 8.1*/
-    touch-action: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
-.fp-section {
-    position: relative;
-    overflow: hidden;
-}
-
-.fp-slide {
-    float: left;
-}
-
-.fp-slide,
-.fp-slidesContainer {
+.table-wrapper {
+    width: 100%;
     height: 100%;
-    display: block;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
 }
 
-.fp-slides {
-    z-index:1;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-.vertical-align {
-    position: relative;
+.table-cell {
     display: table-cell;
     vertical-align: middle;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    text-align: center;
     color: $gray;
 
     h2 {
@@ -290,6 +299,13 @@ footer {
     p {
         margin: 0 20%;
     }
+}
+
+// fullpage.js
+
+.fp-section {
+    position: relative;
+    overflow: hidden;
 }
 
 #fp-nav {
@@ -395,6 +411,18 @@ footer {
                 }
             }
         }
+    }
+}
+
+// loading
+
+@keyframes load-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
 
