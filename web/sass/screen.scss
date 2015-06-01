@@ -39,6 +39,8 @@ button {
 
 * {
     box-sizing: border-box;
+    user-select: none;
+    cursor: default;
 }
 
 header,
@@ -96,6 +98,7 @@ body {
         color: $gray;
         text-decoration: none;
         border-bottom: 1px solid $green;
+        cursor: pointer;
     }
 }
 
@@ -151,6 +154,13 @@ body {
         color: $gray;
         animation: load-spinner 2000ms cubic-bezier(0.19, 1, 0.22, 1) infinite;
     }
+}
+
+// versions
+
+.versions {
+    opacity: 0;
+    pointer-events: none;
 }
 
 // hamburger
@@ -254,20 +264,9 @@ header {
     #hello-wrapper {
         .table-cell,
         .table-wrapper {
-            vertical-align: top;
         }
 
         .center {
-            text-align: left;
-            margin-top: 7%;
-
-            p {
-                margin: 0;
-            }
-
-            a {
-                color:
-            }
         }
     }
 
@@ -399,6 +398,7 @@ footer {
                     left: 50%;
                     top: 50%;
                     margin: -2px 0 0 -3px;
+                    cursor: pointer;
                 }
 
                 &.active span {
