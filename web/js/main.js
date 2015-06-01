@@ -13,19 +13,54 @@ $(document).ready(function() {
         anchors: ['hello', 'inkstarter', 'placevomit', 'ijwgh', 'xxxxxxxooo', 'founders', 'cacete'],
         navigation: true,
         navigationTooltips: ['Hello', 'InkStarter.cc', 'Placevom.it', 'IJWGH.CLUB', 'XXXXXXX.OOO', 'Founders.com.br', 'Cacete.co'],
-        onSlideLeave: function(anchorLink){
-            $('#' + anchorLink + '-wrapper').find('video')[0].stop();
+        onLeave: function(index){
+            $('video')[index-1].pause();
         },
         afterLoad: function(anchorLink){
             $('#' + anchorLink + '-wrapper').find('video')[0].play();
         }
     });
 
+    // target blank
+
+    $('a[rel=external]').attr('target', '_blank');
+
     // hamburger
 
     $('.hamburger').on('click',function(){
+        $(this).toggleClass('active');
         $('#fp-nav').toggleClass('active');
+        if ($(this).hasClass('active')) {
+            setTimeout(function(){
+                $("#fp-nav ul li").each(function(delay) {
+                    $(this).animate({opacity: 0, 'top': '0'}, 0).delay(delay * 73).css({'pointer-events': 'all'}).animate({opacity: 1, 'top': '+=10px'}, 600, 'easeOutExpo');
+                });
+            },150);
+        } else {
+            setTimeout(function(){
+                $("#fp-nav ul li").each(function(delay) {
+                    $(this).css({'pointer-events': 'none'}).delay(delay * 73).animate({opacity: 0, 'top': '0'}, 600, 'easeOutExpo');
+                });
+            },150);
+        }
         return false;
+    });
+
+    // versions
+
+    $('.logo').on('click',function(){
+        $("#versions a").each(function(delay) {
+            $(this).animate({opacity: 0, 'left': '0'}, 0).delay(delay * 73).css({'pointer-events': 'all'}).animate({opacity: 1, 'left': '+=10px'}, 600, 'easeOutExpo');
+        });
+        return false;
+    });
+
+    $('html').on('click',function(event){
+        if($(event.target) != $('logo') && $(event.target) != $('#versions a')) {
+            $("#versions a").each(function(delay) {
+                $(this).css({'pointer-events': 'none'}).delay(delay * 73).animate({opacity: 0, 'left': '0'}, 600, 'easeOutExpo');
+            });
+        }
     });
 
     // load

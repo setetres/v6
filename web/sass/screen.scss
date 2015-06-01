@@ -158,9 +158,13 @@ body {
 
 // versions
 
-.versions {
-    opacity: 0;
-    pointer-events: none;
+#versions {
+    a {
+        position: relative;
+        pointer-events: none;
+        opacity: 0;
+        left: 0;
+    }
 }
 
 // hamburger
@@ -252,24 +256,13 @@ header {
         font-weight: normal;
         border-bottom: 1px solid $green;
         margin: 0 20px 0 0;
+        cursor: pointer;
     }
 }
 
 // main
 
 .main {
-
-    // hello
-
-    #hello-wrapper {
-        .table-cell,
-        .table-wrapper {
-        }
-
-        .center {
-        }
-    }
-
 }
 
 // background video
@@ -336,8 +329,7 @@ footer {
 }
 
 #fp-nav {
-    top: 35%;
-    opacity: 0;
+    top: 37%;
     padding: 0 12px;
     transition-duration: 300ms;
 
@@ -358,9 +350,6 @@ footer {
     }
 
     &.active {
-        top: 37%;
-        opacity: 1;
-
         &:before {
             height: 50%;
         }
@@ -376,6 +365,8 @@ footer {
             height: 11px;
             margin: 2px 0;
             position: relative;
+            opacity: 0;
+            pointer-events: none;
 
             a {
                 display: block;
