@@ -12,6 +12,8 @@
 // css3 animations
 
 .center,
+#fp-nav,
+#fp-nav:before,
 #loading,
 .hamburger,
 .hamburger:before,
@@ -89,6 +91,12 @@ body {
     font-size: 9px;
     line-height: 9px;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    a {
+        color: $gray;
+        text-decoration: none;
+        border-bottom: 1px solid $green;
+    }
 }
 
 // commom
@@ -108,10 +116,7 @@ body {
 }
 
 .list {
-    a {
-        color: $green;
-        text-decoration: none;
-    }
+
 }
 
 // loading
@@ -235,9 +240,8 @@ header {
         float: left;
         font-size: 9px;
         font-weight: normal;
-        text-transform: uppercase;
         border-bottom: 1px solid $green;
-        margin: 0;
+        margin: 0 20px 0 0;
     }
 }
 
@@ -248,8 +252,14 @@ header {
     // hello
 
     #hello-wrapper {
+        .table-cell,
+        .table-wrapper {
+            vertical-align: top;
+        }
+
         .center {
             text-align: left;
+            margin-top: 7%;
 
             p {
                 margin: 0;
@@ -327,15 +337,16 @@ footer {
 }
 
 #fp-nav {
-    top: 37%;
-    opacity: 1;
+    top: 35%;
+    opacity: 0;
     padding: 0 12px;
+    transition-duration: 300ms;
 
     &:before {
         content: '';
         position: absolute;
         z-index: 1;
-        height: 50%;
+        height: 0;
         width: 1px;
         background: $gray;
         left: 50%;
@@ -345,6 +356,15 @@ footer {
 
     &.right {
        right: 5.55555%;
+    }
+
+    &.active {
+        top: 37%;
+        opacity: 1;
+
+        &:before {
+            height: 50%;
+        }
     }
 
     ul {
@@ -366,6 +386,7 @@ footer {
                 height: 100%;
                 cursor: pointer;
                 text-decoration: none;
+                border-bottom: 0;
 
                 span {
                     border-radius: 0px;
