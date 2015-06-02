@@ -13,6 +13,7 @@
 
 .center,
 .title,
+.title a,
 #fp-nav,
 #fp-nav:before,
 #loading,
@@ -110,17 +111,22 @@ body {
      color: $gray;
      font-family: 'Times New Roman';
      font-style: italic;
-     font-size: 14vw;
-     line-height: 14vw;
+     font-size: 12vw;
+     line-height: 12vw;
      font-weight: 100;
      text-transform: uppercase;
      text-align: center;
      padding: 0 20px;
      letter-spacing: -5px;
      text-indent: -15px;
-}
 
-.list {
+     a {
+        border: 0;
+
+        &:hover {
+            color: $light;
+        }
+     }
 }
 
 // loading
