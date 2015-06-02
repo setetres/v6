@@ -4,6 +4,14 @@
 $(document).ready(function() {
     'use strict';
 
+    if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        $('.section').each(function(){
+            var videoID = $(this).attr('id').substring(0, $(this).attr('id').indexOf('-wrapper'));
+            $(this).find('video').append('<source src="img/'+ videoID +'.mp4" type="video/mp4">');
+        });
+    } else {
+    }
+
     // fullpage
 
     $('#fullpage').fullpage({
