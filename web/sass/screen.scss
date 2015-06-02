@@ -274,7 +274,8 @@ header {
 
 // background video
 
-video {
+video,
+.project-image {
     position: absolute;
     top: 0;
     left: 0;
@@ -468,9 +469,48 @@ footer {
 @import "grid.scss";
 @import "print.scss";
 
+#fullpage .section {
+    background-size: cover;
+    background-position: center center;
+}
+
 @media screen and (max-width: 719px) {
     #versions {
         float: left;
         width: 100%;
+    }
+}
+
+html.touch {
+    video {
+        display: none;
+    }
+
+    #hello-wrapper {
+        background-image: url(../img/hello.gif);
+    }
+
+    #inkstarter-wrapper {
+        background-image: url(../img/inkstarter.gif);
+    }
+
+    #placevomit-wrapper {
+        background-image: url(../img/placevomit.gif);
+    }
+
+    #ijwgh-wrapper {
+        background-image: url(../img/ijwgh.gif);
+    }
+
+    #xxxxxxxooo-wrapper {
+        background-image: url(../img/xxxxxxxooo.gif);
+    }
+
+    #founders-wrapper {
+        background-image: url(../img/founders.gif);
+    }
+
+    #cacete-wrapper {
+        background-image: url(../img/cacete.gif);
     }
 }
