@@ -1,6 +1,8 @@
 /// <reference path="../../typings/jquery/jquery.d.ts"/>
 /* global objectFit */
 
+var slidesInfo = ['#hello', '#inkstarter', '#placevomit', '#ijwgh', '#xxxxxxxooo', '#founders', '#cacete'];
+
 $(document).ready(function() {
     'use strict';
 
@@ -85,8 +87,8 @@ $(document).ready(function() {
     // resize
 
     $(window).on('debouncedresize',function() {
-        $.fn.fullpage.setFitToSection(true);
         $.fn.fullpage.reBuild();
+        $.fn.fullpage.moveTo(slidesInfo.indexOf(location.hash)+1);
     });
 
     // init
