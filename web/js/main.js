@@ -9,6 +9,10 @@ $(document).ready(function() {
             var videoID = $(this).attr('id').substring(0, $(this).attr('id').indexOf('-wrapper'));
             $(this).find('video').append('<source src="img/'+ videoID +'.mp4" type="video/mp4">');
         });
+    } else {
+        $('.section').each(function(){
+            $(this).find('video').hide();
+        });
     }
 
     // slides
