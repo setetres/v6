@@ -166,6 +166,8 @@ body {
 // versions
 
 #versions {
+    float: left;
+
     a {
         position: relative;
         pointer-events: none;
@@ -214,6 +216,7 @@ body {
     height: 9px;
     position: relative;
     right: -5px;
+    pointer-events: none;
 
     .horizontal-keys,
     .vertical-keys {
