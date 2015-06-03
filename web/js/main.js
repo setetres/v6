@@ -29,6 +29,9 @@ $(document).ready(function() {
         },
         afterLoad: function(anchorLink){
             $('#' + anchorLink + '-wrapper').find('video')[0].play();
+        },
+        afterResize: function(){
+            $.fn.fullpage.reBuild();
         }
     });
 
