@@ -29,9 +29,6 @@ $(document).ready(function() {
         },
         afterLoad: function(anchorLink){
             $('#' + anchorLink + '-wrapper').find('video')[0].play();
-        },
-        afterResize: function(){
-            $.fn.fullpage.reBuild();
         }
     });
 
@@ -88,7 +85,8 @@ $(document).ready(function() {
     // resize
 
     $(window).on('debouncedresize',function() {
-        $('.tile').css({height: window.innerHeight});
+        $.fn.fullpage.setFitToSection(true);
+        $.fn.fullpage.reBuild();
     });
 
     // init
