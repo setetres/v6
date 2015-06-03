@@ -373,6 +373,7 @@ footer {
 #fp-nav {
     top: 37%;
     padding: 0 12px;
+    pointer-events: none;
 
     &:before {
         content: '';
@@ -392,6 +393,8 @@ footer {
     }
 
     &.active {
+        pointer-events: all;
+
         &:before {
             height: 50%;
         }
