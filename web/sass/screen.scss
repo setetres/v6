@@ -116,11 +116,11 @@ body {
      font-weight: 100;
      text-transform: uppercase;
      text-align: center;
-     padding: 0 20px;
      letter-spacing: -5px;
      text-indent: -15px;
 
      a {
+        padding: 0 30px;
         border: 0;
 
         &:hover {
@@ -270,27 +270,38 @@ header {
 // main
 
 .main {
-}
+    .section {
+        background-size: cover;
+        background-position: center center;
+    }
 
-// background video
+    #hello-wrapper {
+        background-image: url(../img/hello.jpg);
+    }
 
-video,
-.project-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
+    #inkstarter-wrapper {
+        background-image: url(../img/inkstarter.jpg);
+    }
 
-// footer
+    #placevomit-wrapper {
+        background-image: url(../img/placevomit.jpg);
+    }
 
-footer {
-    position: fixed;
-    bottom: 10%;
-    left: 0;
+    #ijwgh-wrapper {
+        background-image: url(../img/ijwgh.jpg);
+    }
+
+    #xxxxxxxooo-wrapper {
+        background-image: url(../img/xxxxxxxooo.jpg);
+    }
+
+    #founders-wrapper {
+        background-image: url(../img/founders.jpg);
+    }
+
+    #cacete-wrapper {
+        background-image: url(../img/cacete.jpg);
+    }
 }
 
 // info layer
@@ -327,6 +338,26 @@ footer {
     p {
         margin: 0 20%;
     }
+}
+
+// video background
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+// footer
+
+footer {
+    position: fixed;
+    bottom: 10%;
+    left: 0;
 }
 
 // fullpage.js
@@ -469,11 +500,6 @@ footer {
 @import "grid.scss";
 @import "print.scss";
 
-#fullpage .section {
-    background-size: cover;
-    background-position: center center;
-}
-
 @media screen and (max-width: 719px) {
     #versions {
         float: left;
@@ -482,39 +508,5 @@ footer {
 
     .title {
         letter-spacing: 0;
-    }
-}
-
-html.touch {
-    video {
-        display: none;
-    }
-
-    #hello-wrapper {
-        background-image: url(../img/hello.gif);
-    }
-
-    #inkstarter-wrapper {
-        background-image: url(../img/inkstarter.gif);
-    }
-
-    #placevomit-wrapper {
-        background-image: url(../img/placevomit.gif);
-    }
-
-    #ijwgh-wrapper {
-        background-image: url(../img/ijwgh.gif);
-    }
-
-    #xxxxxxxooo-wrapper {
-        background-image: url(../img/xxxxxxxooo.gif);
-    }
-
-    #founders-wrapper {
-        background-image: url(../img/founders.gif);
-    }
-
-    #cacete-wrapper {
-        background-image: url(../img/cacete.gif);
     }
 }
