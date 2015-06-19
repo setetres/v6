@@ -1,7 +1,7 @@
 /// <reference path="../../typings/jquery/jquery.d.ts"/>
 /* global objectFit */
 
-var slidesInfo = ['#hello', '#inkstarter', '#placevomit', '#ijwgh', '#xxxxxxxooo', '#founders', '#cacete'];
+var slidesInfo = ['#hello', '#inkstarter', '#curisco', '#placevomit', '#ijwgh', '#xxxxxxxooo', '#founders', '#cacete'];
 
 $(document).ready(function() {
     'use strict';
@@ -23,9 +23,9 @@ $(document).ready(function() {
         css3: true,
         scrollingSpeed: 600,
         easingcss3: 'cubic-bezier(0.19, 1, 0.22, 1)',
-        anchors: ['hello', 'inkstarter', 'placevomit', 'ijwgh', 'xxxxxxxooo', 'founders', 'cacete'],
+        anchors: ['hello', 'inkstarter', 'curisco', 'placevomit', 'ijwgh', 'xxxxxxxooo', 'founders', 'cacete'],
         navigation: true,
-        navigationTooltips: ['Hello', 'InkStarter.cc', 'Placevom.it', 'IJWGH.CLUB', 'XXXXXXX.OOO', 'Founders.com.br', 'Cacete.co'],
+        navigationTooltips: ['Hello', 'InkStarter.cc', 'Curis.co', 'Placevom.it', 'IJWGH.CLUB', 'XXXXXXX.OOO', 'Founders.com.br', 'Cacete.co'],
         onLeave: function(index){
             $('video')[index-1].pause();
         },
