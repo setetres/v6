@@ -18,6 +18,7 @@ $(document).ready(function() {
         $('.section').each(function(){
             $(this).find('video').hide();
         });
+        $('footer').css({display: 'none'});
     }
 
     // slides
