@@ -19,6 +19,9 @@ $(document).ready(function() {
             $(this).find('video').hide();
         });
         $('footer').css({display: 'none'});
+        setTimeout(function(){
+            $('#fp-nav').css({bottom: '10%'});
+        },0);
     }
 
     // slides
