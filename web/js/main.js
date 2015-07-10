@@ -70,7 +70,7 @@ $(document).ready(function() {
 
     $('.logo').on('click',function(){
         $('#versions a').each(function(delay) {
-            $(this).animate({opacity: 0, 'left': '0'}, 0).delay(delay * 73).css({'pointer-events': 'all'}).animate({opacity: 1, 'left': '+=10px'}, 300, 'easeOutExpo');
+            $(this).animate({opacity: 0, 'left': '0'}, 0).delay(delay * 73).css({'pointer-events': 'all'}).animate({opacity: 1, 'left': '+=10px'}, 150, 'easeOutExpo');
         });
         return false;
     });
@@ -78,7 +78,7 @@ $(document).ready(function() {
     $('html').on('click',function(event){
         if($(event.target) !== $('logo') && $(event.target) !== $('#versions a')) {
             $('#versions a').each(function(delay) {
-                $(this).css({'pointer-events': 'none'}).delay(delay * 73).animate({opacity: 0, 'left': '0'}, 300, 'easeOutExpo');
+                $(this).css({'pointer-events': 'none'}).delay(delay * 73).animate({opacity: 0, 'left': '0'}, 150, 'easeOutExpo');
             });
         }
     });

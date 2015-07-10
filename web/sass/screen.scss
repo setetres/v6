@@ -14,7 +14,7 @@
 .center,
 .title,
 .title a,
-.logo,
+.logo:before,
 #fp-nav,
 #fp-nav:before,
 #loading,
@@ -475,6 +475,10 @@ footer {
                 cursor: pointer;
                 text-decoration: none;
                 border-bottom: 0;
+
+                &:before {
+                    display: none;
+                }
 
                 span {
                     border-radius: 0px;
