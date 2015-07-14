@@ -1,5 +1,6 @@
 Redirect 301 /ello http://ello.co/setetres
 Redirect 301 /email mailto:x@setetres.st
+Redirect 301 /ebmfw http://github.com/setetres/evenbettermotherfuckingwebsite
 Redirect 301 /facebook http://fb.com/setetres.st
 Redirect 301 /feedhop http://feedhop.io/u/setetres
 Redirect 301 /github http://github.com/setetres
