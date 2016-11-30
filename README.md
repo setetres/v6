@@ -3,7 +3,7 @@ v6 [![Github License](https://img.shields.io/github/license/setetres/v6.svg)](ht
 
 v6.0 of my website. [http://v6.setetres.st]
 
-[![v6](http://files.setetres.st/img/v6-desktop.png?v=2&raw=true)](http://v6.setetres.st)
+[![v6](http://setetres.s3.amazonaws.com/setetres.st/img/v6-desktop.png?v=2&raw=true)](http://v6.setetres.st)
 
 License
 -------
